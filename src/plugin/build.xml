@@ -48,6 +48,7 @@
      <ant dir="parse-ext" target="deploy"/>
      <ant dir="parse-js" target="deploy"/>
      <ant dir="parse-html" target="deploy"/>
+     <ant dir="parse-googleplay" target="deploy"/>
      <ant dir="parse-metatags" target="deploy"/>
      <ant dir="parse-swf" target="deploy"/>
      <ant dir="parse-tika" target="deploy"/>
@@ -130,6 +131,7 @@
     <ant dir="parse-ext" target="clean"/>
     <ant dir="parse-js" target="clean"/>
     <ant dir="parse-html" target="clean"/>
+    <ant dir="parse-googleplay" target="clean"/>
     <ant dir="parse-metatags" target="clean"/>
     <ant dir="parse-swf" target="clean"/>
     <ant dir="parse-tika" target="clean"/>

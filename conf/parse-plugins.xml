@@ -59,6 +59,10 @@
 		<plugin id="parse-html" />
 	</mimeType>
 
+        <mimeType name="text/html">
+                <plugin id="parse-googleplay" />
+        </mimeType>
+
         <mimeType name="application/xhtml+xml">
 		<plugin id="parse-html" />
 	</mimeType>
@@ -86,6 +90,8 @@
 		<alias name="parse-ext" extension-id="ExtParser" />
 		<alias name="parse-html"
 			extension-id="org.apache.nutch.parse.html.HtmlParser" />
+                <alias name="parse-googleplay"
+                        extension-id="org.apache.nutch.parse.googleplay.GoogleplayParser" />
 		<alias name="parse-js" extension-id="JSParser" />
 		<alias name="feed"
 			extension-id="org.apache.nutch.parse.feed.FeedParser" />

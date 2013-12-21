@@ -1328,6 +1328,7 @@ public class Fetcher extends Configured implements Tool,
     job.setOutputFormat(FetcherOutputFormat.class);
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(NutchWritable.class);
+    job.setNumReduceTasks(0);
 
     JobClient.runJob(job);
 
