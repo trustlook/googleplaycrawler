@@ -168,7 +168,7 @@ public class GoogleplayParser implements Parser {
         meta.set("description", description);
                 
         ParseData parseData = new ParseData(ParseStatus.STATUS_SUCCESS, title,
-                outlinks.toArray(new Outlink[0]), content.getMetadata());
+                outlinks.toArray(new Outlink[0]), meta);
         ParseResult parseResult = ParseResult.createParseResult(content.getUrl(), 
                 new ParseImpl(htmlText, parseData));
         return parseResult;
