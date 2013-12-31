@@ -44,4 +44,8 @@
   <name>fetcher.threads.fetch</name>
   <value>20</value>
 </property>
+<property>
+  <name>mapred.reduce.tasks</name>
+  <value>200</value>
+</property>
 </configuration>
