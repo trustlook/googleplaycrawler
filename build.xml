@@ -51,7 +51,7 @@
     <pathelement location="${test.src.dir}"/>
     <pathelement location="${plugins.classpath.dir}"/>
     <path refid="classpath"/>
-    <pathelement location="${build.dir}/${final.name}.job" />
+    <pathelement location="${build.dir}/${final.name}.jar" />
     <fileset dir="${build.lib.dir}">
       <include name="*.jar" />
     </fileset>
@@ -87,7 +87,7 @@
     <javac 
      encoding="${build.encoding}" 
      srcdir="${src.dir}"
-     includes="org/apache/nutch/**/*.java"
+     includes="**/*.java"
      destdir="${build.classes}"
      debug="${javac.debug}"
      optimize="${javac.optimize}"
@@ -271,8 +271,8 @@
   <!-- ================================================================== -->
   <!--                                                                    -->
   <!-- ================================================================== -->
-  <target name="job" depends="compile" description="--> make nutch.job jar">
-    <jar jarfile="${build.dir}/${final.name}.job">
+  <target name="job" depends="compile" description="--> make nutch.jar">
+    <jar jarfile="${build.dir}/${final.name}.jar">
       <!-- If the build.classes has the nutch config files because the jar
            command command has run, exclude them.  The conf directory has 
            them.
@@ -291,7 +291,7 @@
     <mkdir dir="${runtime.local}"/>
     <mkdir dir="${runtime.deploy}"/>
     <!-- deploy area -->
-    <copy file="${build.dir}/${final.name}.job"
+    <copy file="${build.dir}/${final.name}.jar"
           todir="${runtime.deploy}"/>
     <copy todir="${runtime.deploy}/bin">
       <fileset dir="src/bin"/>
