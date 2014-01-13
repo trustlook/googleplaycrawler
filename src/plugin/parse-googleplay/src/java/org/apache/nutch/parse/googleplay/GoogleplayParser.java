@@ -117,6 +117,7 @@ public class GoogleplayParser implements Parser {
             m = categoryPattern.matcher(htmlText);
             if (m.find()) {
                 category = m.group(1);
+                category = category.replace("&amp;", "and");
             }
             meta.set("category", category!=null?category:"");
             
